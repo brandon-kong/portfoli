@@ -5,7 +5,7 @@ import { Input } from '../input';
 import { Label } from '../label';
 import { useForm, ValidationError } from '@formspree/react';
 import { Textarea } from '../textarea';
-import React from 'react';
+import { useRef } from 'react';
 
 import ConfettiExplosion from 'confetti-explosion-react';
 
@@ -13,7 +13,7 @@ export default function EmailForm(): React.JSX.Element {
     const [state, handleSubmit] = useForm(
         process.env.NEXT_PUBLIC_FORMSPREE_CONTACT_FORM_ID as string,
     );
-    const formRef = React.useRef<HTMLFormElement>(null);
+    const formRef = useRef<HTMLFormElement>(null);
 
     const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         handleSubmit(e).then(() => {

@@ -45,7 +45,7 @@ export default async function SkillCard({
                     priority
                     sizes="40px"
                     className={
-                        'w-10 h-10 flex-shrink brightness-0 dark:invert opacity-40'
+                        'w-10 h-10 flex-shrink brightness-0 dark:invert opacity-40 object-contain'
                     }
                 />
 
